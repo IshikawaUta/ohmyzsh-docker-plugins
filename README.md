@@ -1,69 +1,69 @@
-# Docker plugin
----
-## Aliases
+# Plugin Docker
+## Alias
 
-| Alias   | Command                       | Description                                                                              |
-| :------ | :---------------------------- | :--------------------------------------------------------------------------------------- |
-| dbl     | `docker build`                | Build an image from a Dockerfile                                                         |
-| dcin    | `docker container inspect`    | Display detailed information on one or more containers                                   |
-| dcls    | `docker container ls`         | List all the running docker containers                                                   |
-| dclsa   | `docker container ls -a`      | List all running and stopped containers                                                  |
-| dib     | `docker image build`          | Build an image from a Dockerfile (same as docker build)                                  |
-| dii     | `docker image inspect`        | Display detailed information on one or more images                                       |
-| dils    | `docker image ls`             | List docker images                                                                       |
-| dipu    | `docker image push`           | Push an image or repository to a remote registry                                         |
-| dipru   | `docker image prune -a`       | Remove all images not referenced by any container                                        |
-| dirm    | `docker image rm`             | Remove one or more images                                                                |
-| dit     | `docker image tag`            | Add a name and tag to a particular image                                                 |
-| dlo     | `docker container logs`       | Fetch the logs of a docker container                                                     |
-| dnc     | `docker network create`       | Create a new network                                                                     |
-| dncn    | `docker network connect`      | Connect a container to a network                                                         |
-| dndcn   | `docker network disconnect`   | Disconnect a container from a network                                                    |
-| dni     | `docker network inspect`      | Return information about one or more networks                                            |
-| dnls    | `docker network ls`           | List all networks the engine daemon knows about, including those spanning multiple hosts |
-| dnrm    | `docker network rm`           | Remove one or more networks                                                              |
-| dpo     | `docker container port`       | List port mappings or a specific mapping for the container                               |
-| dps     | `docker ps`                   | List all the running docker containers                                                   |
-| dpsa    | `docker ps -a`                | List all running and stopped containers                                                  |
-| dpu     | `docker pull`                 | Pull an image or a repository from a registry                                            |
-| dr      | `docker container run`        | Create a new container and start it using the specified command                          |
-| drit    | `docker container run -it`    | Create a new container and start it in an interactive shell                              |
-| drm     | `docker container rm`         | Remove the specified container(s)                                                        |
-| drm!    | `docker container rm -f`      | Force the removal of a running container (uses SIGKILL)                                  |
-| dst     | `docker container start`      | Start one or more stopped containers                                                     |
-| drs     | `docker container restart`    | Restart one or more containers                                                           |
-| dsta    | `docker stop $(docker ps -q)` | Stop all running containers                                                              |
-| dstp    | `docker container stop`       | Stop one or more running containers                                                      |
-| dsts    | `docker stats`                | Display real-time streaming statistics for containers                                                    |
-| dtop    | `docker top`                  | Display the running processes of a container                                             |
-| dvi     | `docker volume inspect`       | Display detailed information about one or more volumes                                   |
-| dvls    | `docker volume ls`            | List all the volumes known to docker                                                     |
-| dvprune | `docker volume prune`         | Cleanup dangling volumes                                                                 |
-| dxc     | `docker container exec`       | Run a new command in a running container                                                 |
-| dxcit   | `docker container exec -it`   | Run a new command in a running container in an interactive shell                         |
+| Alias | Perintah | Deskripsi |
+| :--- | :--- | :--- |
+| **dbl** | `docker build` | Membangun *image* dari *Dockerfile* |
+| **dcin** | `docker container inspect` | Menampilkan informasi rinci tentang satu atau lebih *container* |
+| **dcls** | `docker container ls` | Mendaftar semua *container* *docker* yang sedang berjalan |
+| **dclsa** | `docker container ls -a` | Mendaftar semua *container* yang sedang berjalan dan yang sudah dihentikan |
+| **dib** | `docker image build` | Membangun *image* dari *Dockerfile* (sama dengan `docker build`) |
+| **dii** | `docker image inspect` | Menampilkan informasi rinci tentang satu atau lebih *image* |
+| **dils** | `docker image ls` | Mendaftar *image* *docker* |
+| **dipu** | `docker image push` | Mendorong (*push*) *image* atau *repository* ke *registry* jarak jauh |
+| **dipru** | `docker image prune -a` | Menghapus semua *image* yang tidak direferensikan oleh *container* mana pun |
+| **dirm** | `docker image rm` | Menghapus satu atau lebih *image* |
+| **dit** | `docker image tag` | Menambahkan nama dan *tag* ke *image* tertentu |
+| **dlo** | `docker container logs` | Mengambil *log* dari *container* *docker* |
+| **dnc** | `docker network create` | Membuat *network* baru |
+| **dncn** | `docker network connect` | Menghubungkan *container* ke *network* |
+| **dndcn** | `docker network disconnect` | Memutuskan hubungan *container* dari *network* |
+| **dni** | `docker network inspect` | Mengembalikan informasi tentang satu atau lebih *network* |
+| **dnls** | `docker network ls` | Mendaftar semua *network* yang diketahui oleh *daemon* mesin, termasuk yang mencakup banyak *host* |
+| **dnrm** | `docker network rm` | Menghapus satu atau lebih *network* |
+| **dpo** | `docker container port` | Mendaftar pemetaan *port* atau pemetaan spesifik untuk *container* |
+| **dps** | `docker ps` | Mendaftar semua *container* *docker* yang sedang berjalan |
+| **dpsa** | `docker ps -a` | Mendaftar semua *container* yang sedang berjalan dan yang sudah dihentikan |
+| **dpu** | `docker pull` | Menarik (*pull*) *image* atau *repository* dari *registry* |
+| **dr** | `docker container run` | Membuat *container* baru dan memulainya menggunakan perintah yang ditentukan |
+| **drit** | `docker container run -it` | Membuat *container* baru dan memulainya dalam *shell* interaktif |
+| **drm** | `docker container rm` | Menghapus *container* yang ditentukan |
+| **drm!** | `docker container rm -f` | Memaksa penghapusan *container* yang sedang berjalan (menggunakan SIGKILL) |
+| **dst** | `docker container start` | Memulai satu atau lebih *container* yang sudah dihentikan |
+| **drs** | `docker container restart` | Memulai ulang satu atau lebih *container* |
+| **dsta** | `docker stop $(docker ps -q)` | Menghentikan semua *container* yang sedang berjalan |
+| **dstp** | `docker container stop` | Menghentikan satu atau lebih *container* yang sedang berjalan |
+| **dsts** | `docker stats` | Menampilkan statistik *streaming* waktu nyata untuk *container* |
+| **dtop** | `docker top` | Menampilkan proses yang sedang berjalan dari suatu *container* |
+| **dvi** | `docker volume inspect` | Menampilkan informasi rinci tentang satu atau lebih *volume* |
+| **dvls** | `docker volume ls` | Mendaftar semua *volume* yang diketahui oleh *docker* |
+| **dvprune** | `docker volume prune` | Membersihkan *volume* yang menggantung (*dangling volumes*) |
+| **dxc** | `docker container exec` | Menjalankan perintah baru di *container* yang sedang berjalan |
+| **dxcit** | `docker container exec -it` | Menjalankan perintah baru di *container* yang sedang berjalan dalam *shell* interaktif |
+
 ---
+
 # Docker-compose
----
-## Aliases
+## Alias
 
-| Alias     | Command                          | Description                                                                      |
-|-----------|----------------------------------|----------------------------------------------------------------------------------|
-| dco       | `docker-compose`                 | Docker-compose main command                                                      |
-| dcb       | `docker-compose build`           | Build containers                                                                 |
-| dce       | `docker-compose exec`            | Execute command inside a container                                               |
-| dcps      | `docker-compose ps`              | List containers                                                                  |
-| dcrestart | `docker-compose restart`         | Restart container                                                                |
-| dcrm      | `docker-compose rm`              | Remove container                                                                 |
-| dcr       | `docker-compose run`             | Run a command in container                                                       |
-| dcstop    | `docker-compose stop`            | Stop a container                                                                 |
-| dcup      | `docker-compose up`              | Build, (re)create, start, and attach to containers for a service                 |
-| dcupb     | `docker-compose up --build`      | Same as `dcup`, but build images before starting containers                      |
-| dcupd     | `docker-compose up -d`           | Same as `dcup`, but starts as daemon                                             |
-| dcupdb    | `docker-compose up -d --build`   | Same as `dcup`, but build images before starting containers and starts as daemon |
-| dcdn      | `docker-compose down`            | Stop and remove containers                                                       |
-| dcl       | `docker-compose logs`            | Show logs of container                                                           |
-| dclf      | `docker-compose logs -f`         | Show logs and follow output                                                      |
-| dclF      | `docker-compose logs -f --tail0` | Just follow recent logs                                                          |
-| dcpull    | `docker-compose pull`            | Pull image of a service                                                          |
-| dcstart   | `docker-compose start`           | Start a container                                                                |
-| dck       | `docker-compose kill`            | Kills containers                                                                 |
+| Alias | Perintah | Deskripsi |
+| :--- | :--- | :--- |
+| **dco** | `docker-compose` | Perintah utama *Docker-compose* |
+| **dcb** | `docker-compose build` | Membangun *container* |
+| **dce** | `docker-compose exec` | Mengeksekusi perintah di dalam *container* |
+| **dcps** | `docker-compose ps` | Mendaftar *container* |
+| **dcrestart** | `docker-compose restart` | Memulai ulang *container* |
+| **dcrm** | `docker-compose rm` | Menghapus *container* |
+| **dcr** | `docker-compose run` | Menjalankan perintah di dalam *container* |
+| **dcstop** | `docker-compose stop` | Menghentikan *container* |
+| **dcup** | `docker-compose up` | Membangun, (membuat ulang), memulai, dan melampirkan (*attach*) ke *container* untuk suatu layanan |
+| **dcupb** | `docker-compose up --build` | Sama seperti `dcup`, tetapi membangun *image* sebelum memulai *container* |
+| **dcupd** | `docker-compose up -d` | Sama seperti `dcup`, tetapi dimulai sebagai *daemon* |
+| **dcupdb** | `docker-compose up -d --build` | Sama seperti `dcup`, tetapi membangun *image* sebelum memulai *container* dan dimulai sebagai *daemon* |
+| **dcdn** | `docker-compose down` | Menghentikan dan menghapus *container* |
+| **dcl** | `docker-compose logs` | Menampilkan *log* dari *container* |
+| **dclf** | `docker-compose logs -f` | Menampilkan *log* dan mengikuti (*follow*) *output* |
+| **dclF** | `docker-compose logs -f --tail0` | Hanya mengikuti (*follow*) *log* terbaru |
+| **dcpull** | `docker-compose pull` | Menarik (*pull*) *image* dari suatu layanan |
+| **dcstart** | `docker-compose start` | Memulai *container* |
+| **dck** | `docker-compose kill` | Membunuh *container* |
